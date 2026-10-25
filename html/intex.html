@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <header >
+    <h1>Portfolio</h1>
+<nav>
+  <!-- its #top now so it works properly but should be gallery in case ill add something above idk-->
+  <a href="#top">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+  </header>
+<!-- images -->
+  <main class="gallery" id="gallery">
+    <div class="gallery-item">
+      <img src=fish1.jpg alt="Oreochromis niloticus">
+      <div class="caption">Oreochromis niloticus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish2.jpg" alt="Cyprinus rubrofuscus">
+      <div class="caption">Cyprinus rubrofuscus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish3.jpg" alt="Siganus guttatus">
+      <div class="caption">Siganus guttatus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish4.jpg" alt=" Trachinotus goodei">
+      <div class="caption">Trachinotus goodei</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish5.jpg" alt="Cyprinus rubrofuscus">
+      <div class="caption">Cyprinus rubrofuscus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish6.jpg" alt="Sebastes ruberrimus">
+      <div class="caption">Sebastes ruberrimus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish7.jpg" alt="Lutjanus bohar">
+      <div class="caption">Lutjanus bohar</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish8.jpg" alt="Cyprinus carpio">
+      <div class="caption">Cyprinus carpio</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish9.jpg" alt="Oncorhynchus mykiss">
+      <div class="caption">Oncorhynchus mykiss</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish10.jpg" alt="Cyprinus rubrofuscus">
+      <div class="caption">Cyprinus rubrofuscus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish11.jpg" alt="Cyprinus rubrofuscus">
+      <div class="caption">Cyprinus rubrofuscus</div>
+    </div>
+    <div class="gallery-item">
+      <img src="fish12.jpg" alt=" Cyprinus rubrofuscus">
+      <div class="caption"> Cyprinus rubrofuscus</div>
+    </div>
+  </main>
+
+ <!-- contact information -->
+ <footer id="contact">
+  <p>Contact me: <a href="mailto:gabriela.jarosz@akademiata.edu.pl">gabriela.jarosz@akademiata.edu.pl</a></p>
+  <p>&copy; 2026 Gabriela Jarosz. Pictures are not mine.</p>
+  <p><a href="#top"> Back to top</a></p>
+ </footer>
+ 
+ <!-- lightbox container -->
+  <div id="lightbox" class="lightbox hidden">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+ <script>
+ 
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.getElementById('lightbox-img').src = img.src;
+    });
+  });
+
+ 
+  document.querySelector('.close').addEventListener('click', () => {
+    document.getElementById('lightbox').classList.add('hidden');
+  });
+</script>
+
+</body>
+</html>
